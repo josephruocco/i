@@ -1,0 +1,1049 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-06-04 Thu 14:45 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>i.org</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Joseph Ruocco" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">i.org</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org2c420e2">1. myself</a></li>
+<li><a href="#org0ba9025">2. To Do and Notes</a></li>
+<li><a href="#org1d9a60b">3. Notes</a></li>
+<li><a href="#orgb31af77">4. Blog Topics</a></li>
+<li><a href="#org49b94c4">5. YouTube</a></li>
+<li><a href="#orgef75f51">6. Ian Frazier</a></li>
+<li><a href="#org7ab96d8">7. illiad</a></li>
+<li><a href="#orgf4d2d42">8. The odssey</a></li>
+<li><a href="#org73cb98a">9. Tim Mcgee</a></li>
+<li><a href="#orge7d007a">10. Whitman</a>
+<ul>
+<li><a href="#orgccdc898">10.1. Whitman, Intro, A:</a></li>
+<li><a href="#org35563bc">10.2. Whitman, Intro, B:</a></li>
+<li><a href="#orgdb03932">10.3. Whitman, from the Preface to 1855 Leaves of Grass, p. 426:</a></li>
+<li><a href="#org4158a6a">10.4. Whitman, from Song of Myself, #1, p. 428:</a></li>
+<li><a href="#org8bdd519">10.5. Whitman, from Song of Myself, #6, p. 428:</a></li>
+<li><a href="#orgd21ae3a">10.6. Whitman, from Song of Myself, #9, p. 429:</a></li>
+<li><a href="#orgff9e974">10.7. Whitman, from Song of Myself, #14, p. 429:</a></li>
+<li><a href="#org73808e1">10.8. Whitman, from Song of Myself, #17, p. 430:</a></li>
+<li><a href="#org62ba158">10.9. Whitman, from Song of Myself, #51, p. 430:</a></li>
+<li><a href="#org9133f12">10.10. Whitman, from Song of Myself, #52, p. 431:</a></li>
+<li><a href="#orge2c40fd">10.11. Whitman, When I Heard The Learn’d Astronomer, p. 432:</a></li>
+<li><a href="#orgf9659a0">10.12. Whitman, By The Bivouac’s Fitful Flame, p. 433:</a></li>
+<li><a href="#orge1ced14">10.13. Whitman, I Hear America Singing, p. 435:</a></li>
+<li><a href="#org858c10f">10.14. Whitman, A Noiseless Patient Spider, p. 436:</a></li>
+</ul>
+</li>
+<li><a href="#org1d3d986">11. life</a>
+<ul>
+<li><a href="#orgeb6fc27">11.1. <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-12-02 Mon&gt;</span></span></a></li>
+<li><a href="#org17b6c0c">11.2. <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-12-03 Tue&gt;</span></span></a></li>
+<li><a href="#org1da81e4">11.3. <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-12-05 Thu&gt;</span></span></a></li>
+<li><a href="#org4a88927">11.4. <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-12-06 Fri&gt;</span></span></a></li>
+<li><a href="#org35bcd54">11.5. <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-12-08 Sun&gt;</span></span></a></li>
+<li><a href="#orgccffb25">11.6. <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-12-09 Mon&gt;</span></span></a></li>
+<li><a href="#orgd897c5f">11.7. <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-12-10 Tue&gt;</span></span></a></li>
+<li><a href="#orga67002e">11.8. <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-12-11 Wed&gt;</span></span></a></li>
+<li><a href="#orge543aa7">11.9. <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-12-12 Thu&gt;</span></span></a></li>
+<li><a href="#orga803da6">11.10. <span class="timestamp-wrapper"><span class="timestamp">&lt;2020-02-10 Mon&gt;</span></span></a></li>
+<li><a href="#org1c1e787">11.11. <span class="timestamp-wrapper"><span class="timestamp">&lt;2020-03-19 Thu&gt;</span></span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2c420e2" class="outline-2">
+<h2 id="org2c420e2"><span class="section-number-2">1</span> myself</h2>
+<div class="outline-text-2" id="text-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">joe's accounts</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">financial achievement</td>
+<td class="org-left"><a href="money.html">link</a></td>
+</tr>
+
+<tr>
+<td class="org-left">business achievement</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">love life</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">fulfillment</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">health</td>
+<td class="org-left"><a href="health.html">health</a></td>
+</tr>
+
+<tr>
+<td class="org-left">notes</td>
+<td class="org-left"><a href="file:///Users/josephruocco/notes/joe_blog/notes.html">notes</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org0ba9025" class="outline-2">
+<h2 id="org0ba9025"><span class="section-number-2">2</span> To Do and Notes</h2>
+</div>
+<div id="outline-container-org1d9a60b" class="outline-2">
+<h2 id="org1d9a60b"><span class="section-number-2">3</span> Notes</h2>
+</div>
+<div id="outline-container-orgb31af77" class="outline-2">
+<h2 id="orgb31af77"><span class="section-number-2">4</span> Blog Topics</h2>
+</div>
+<div id="outline-container-org49b94c4" class="outline-2">
+<h2 id="org49b94c4"><span class="section-number-2">5</span> YouTube</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+<iframe width="440" height="335" src="https://www.youtube.com/embed/I9gUu6IbMQ" frameborder="0" allowfullscreen></iframe>
+<iframe width="440" height="335" src="https://www.youtube.com/embed/fHIWwUU3sgI" frameborder="0" allowfullscreen></iframe>
+<iframe width="440" height="335" src="https://www.youtube.com/embed/UJp4RLQ6zx0" frameborder="0" allowfullscreen></iframe>
+</p>
+</div>
+</div>
+<div id="outline-container-orgef75f51" class="outline-2">
+<h2 id="orgef75f51"><span class="section-number-2">6</span> Ian Frazier</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+<iframe width="440" height="335" src="https://www.youtube.com/embed/qBtVhy9R3Io" frameborder="0" allowfullscreen></iframe>
+</p>
+</div>
+</div>
+<div id="outline-container-org7ab96d8" class="outline-2">
+<h2 id="org7ab96d8"><span class="section-number-2">7</span> illiad</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+AP: Iliad, Book 1:
+AP: Homer’s Iliad, Book 1, A: <iframe width="440" height="335" src="https://www.youtube.com/embed/9OQj1tLn-iU" frameborder="0" allowfullscreen></iframe>
+AP: Homer’s Iliad, Book 1, B: <iframe width="440" height="335" src="https://www.youtube.com/embed/DfXhTSNUkqQ" frameborder="0" allowfullscreen></iframe>
+AP: Homer’s Iliad, Book 1, C: <iframe width="440" height="335" src="https://www.youtube.com/embed/EP1TVU1zM1w" frameborder="0" allowfullscreen></iframe>
+AP: Homer’s Iliad, Book 1, D: <iframe width="440" height="335" src="https://www.youtube.com/embed/QV7GeObaQYU" frameborder="0" allowfullscreen></iframe>
+AP: Homer’s Iliad, Book 2, A: <iframe width="440" height="335" src="https://www.youtube.com/embed/KwyHXEOy1w0" frameborder="0" allowfullscreen></iframe>
+AP: Homer’s Iliad, Book 2, B: <iframe width="440" height="335" src="https://www.youtube.com/embed/3HadepaoLqY" frameborder="0" allowfullscreen></iframe>
+AP: Homer’s Iliad, Book 3, A: <iframe width="440" height="335" src="https://www.youtube.com/embed/2LQ2ZJqiG-U" frameborder="0" allowfullscreen></iframe>
+AP: Homer’s Iliad, Book 3, B: <iframe width="440" height="335" src="https://www.youtube.com/embed/yniu-gFAjGQ" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 4, A: <iframe width="440" height="335" src="https://www.youtube.com/embed/CvV8ElozQ5E" frameborder="0" allowfullscreen></iframe>
+AP: Homer’s Iliad, Book 4, B: <iframe width="440" height="335" src="https://www.youtube.com/embed/mkXDUAFg7lM" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 5, A: <iframe width="440" height="335" src="https://www.youtube.com/embed/lqjxQ5byAFY" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 5, B: <iframe width="440" height="335" src="https://www.youtube.com/embed/QeCKfGQUElE" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 6, A: <iframe width="440" height="335" src="https://www.youtube.com/embed/gfVSw37q0eM" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 6, B: <iframe width="440" height="335" src="https://www.youtube.com/embed/FHLx5PlLCZg" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 7: <iframe width="440" height="335" src="https://www.youtube.com/embed/-p6DJKjp-rc" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 8, A: <iframe width="440" height="335" src="https://www.youtube.com/embed/ucoXP7OYvy0" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 8, B: <iframe width="440" height="335" src="https://www.youtube.com/embed/dAnQN-R66-4" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+]]
+AP: Homer’s Iliad, Book 9, A: <iframe width="440" height="335" src="https://www.youtube.com/embed/Gjca67XS1_g" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 9, B: <iframe width="440" height="335" src="https://www.youtube.com/embed/deEr4FAqTfI" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 9, C: <iframe width="440" height="335" src="https://www.youtube.com/embed/kZLqASRZSHQ" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 9, D: <iframe width="440" height="335" src="https://www.youtube.com/embed/Fk7JsMfUwZY" frameborder="0" allowfullscreen></iframe>
+AP: Homer’s Iliad, Review of books 1-9: Achilles’ crisis of faith: <iframe width="440" height="335" src="https://www.youtube.com/embed/rWv2tC3Uah8" frameborder="0" allowfullscreen></iframe>
+</p>
+
+
+
+<p>
+AP: Iliad, Book 10:
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 10, A: <iframe width="440" height="335" src="https://www.youtube.com/embed/687Tf6wsWQQ" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 10, B: <iframe width="440" height="335" src="https://www.youtube.com/embed/8Ycknp5jdkA" frameborder="0" allowfullscreen></iframe>
+</p>
+
+
+
+<p>
+AP: Iliad, Book 11:
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 11, A: <iframe width="440" height="335" src="https://www.youtube.com/embed/MVoYuE04O4g" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 11, B: <iframe width="440" height="335" src="https://www.youtube.com/embed/XNEAP-vTMxg" frameborder="0" allowfullscreen></iframe>
+</p>
+
+
+
+<p>
+AP: Iliad, Book 12:
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 12, A: <iframe width="440" height="335" src="https://www.youtube.com/embed/ThUpKDt6zEc" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 12, B: <iframe width="440" height="335" src="https://www.youtube.com/embed/BuOew5SxPC4" frameborder="0" allowfullscreen></iframe>
+</p>
+
+
+
+<p>
+AP: Iliad, Book 13:
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 13, A: <iframe width="440" height="335" src="https://www.youtube.com/embed/9UYcYC4_KBU" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 13, B: <iframe width="440" height="335" src="https://www.youtube.com/embed/1ApFdGMVkHQ" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 13, C: <iframe width="440" height="335" src="https://www.youtube.com/embed/BmkrDjo8VAg" frameborder="0" allowfullscreen></iframe>
+</p>
+
+
+
+
+
+<p>
+AP: Iliad, Book 14:
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 14, A: <iframe width="440" height="335" src="https://www.youtube.com/embed/XMvPy991Gs0" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 14, B: <iframe width="440" height="335" src="https://www.youtube.com/embed/wtFut2vEx1k" frameborder="0" allowfullscreen></iframe>
+</p>
+
+
+
+<p>
+AP: Iliad, Book 15:
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 15, A: <iframe width="440" height="335" src="https://www.youtube.com/embed/wjhHeoM9EIY" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 15, B: <iframe width="440" height="335" src="https://www.youtube.com/embed/E-Xypn7M2vo" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 15, C: <iframe width="440" height="335" src="https://www.youtube.com/embed/W1MAeYqWIuU" frameborder="0" allowfullscreen></iframe>
+</p>
+
+
+
+<p>
+AP: Iliad, Book 16:
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 16, A: <iframe width="440" height="335" src="https://www.youtube.com/embed/T7r7rS8VCK8" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 16, B: <iframe width="440" height="335" src="https://www.youtube.com/embed/IFUEaqW0D8w" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 16, C: <iframe width="440" height="335" src="https://www.youtube.com/embed/kjD9m8T-5EE" frameborder="0" allowfullscreen></iframe>
+</p>
+
+
+
+<p>
+AP: Iliad, Book 17:
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 17, A: <iframe width="440" height="335" src="https://www.youtube.com/embed/mcpLroZStkU" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 17, B: <iframe width="440" height="335" src="https://www.youtube.com/embed/TgGHE7HGq6Q" frameborder="0" allowfullscreen></iframe>
+</p>
+
+
+
+<p>
+AP: Iliad, Book 18:
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 18, A: <iframe width="440" height="335" src="https://www.youtube.com/embed/LRq0nFZL3rE" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 18, B: <iframe width="440" height="335" src="https://www.youtube.com/embed/zzJiTm0HWSY" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 18, C: <iframe width="440" height="335" src="https://www.youtube.com/embed/-YEgumexjP8" frameborder="0" allowfullscreen></iframe>
+</p>
+
+
+
+<p>
+AP: Iliad, Book 19:
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 19, A: <iframe width="440" height="335" src="https://www.youtube.com/embed/k3mDi5hgiv8" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 19, B: <iframe width="440" height="335" src="https://www.youtube.com/embed/72vNYnOXaq8" frameborder="0" allowfullscreen></iframe>
+</p>
+
+
+
+<p>
+AP: Iliad, Book 20:
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 20, A: <iframe width="440" height="335" src="https://www.youtube.com/embed/6ITntjSobNo" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 20, B: <iframe width="440" height="335" src="https://www.youtube.com/embed/2eWs8y2cVHc" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 20, C: <iframe width="440" height="335" src="https://www.youtube.com/embed/DgzaRhzXPAk" frameborder="0" allowfullscreen></iframe>
+</p>
+
+
+
+<p>
+AP: Iliad, Book 21:
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 21, A: <iframe width="440" height="335" src="https://www.youtube.com/embed/fanj3Xy4o-M" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 21, B: <iframe width="440" height="335" src="https://www.youtube.com/embed/83pKoyxVI4c" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 21, C: <iframe width="440" height="335" src="https://www.youtube.com/embed/3DPS4UW1zXs" frameborder="0" allowfullscreen></iframe>
+</p>
+
+
+
+<p>
+AP: Iliad, Book 22:
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 22, A: <iframe width="440" height="335" src="https://www.youtube.com/embed/Oban0sM2yr4" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 22, B: <iframe width="440" height="335" src="https://www.youtube.com/embed/AkXHGz_loE0" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 22, C: <iframe width="440" height="335" src="https://www.youtube.com/embed/UvQfxvR0SYY" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 22, D: <iframe width="440" height="335" src="https://www.youtube.com/embed/ZUqG59-ic38" frameborder="0" allowfullscreen></iframe>
+</p>
+
+
+
+<p>
+AP: Iliad, Book 23:
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 23, A: <iframe width="440" height="335" src="https://www.youtube.com/embed/o8BySthiDYE" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 23, B: <iframe width="440" height="335" src="https://www.youtube.com/embed/ikDfwwFE66Y" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 23, C: <iframe width="440" height="335" src="https://www.youtube.com/embed/eqwUZLWTFaM" frameborder="0" allowfullscreen></iframe>
+</p>
+
+
+
+
+
+<p>
+AP: Iliad, Book 24:
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 24, A: <iframe width="440" height="335" src="https://www.youtube.com/embed/MzvNZ-u5wxc" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 24, B: <iframe width="440" height="335" src="https://www.youtube.com/embed/GXWaA4VF2HQ" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 24, C: <iframe width="440" height="335" src="https://www.youtube.com/embed/8ulg5hFoksE" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 24, D: <iframe width="440" height="335" src="https://www.youtube.com/embed/ncHM5wbyOYI" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+AP: Homer’s Iliad, Book 24, E: <iframe width="440" height="335" src="https://www.youtube.com/embed/4xzF07u3AOw" frameborder="0" allowfullscreen></iframe>
+</p>
+</div>
+</div>
+<div id="outline-container-orgf4d2d42" class="outline-2">
+<h2 id="orgf4d2d42"><span class="section-number-2">8</span> The odssey</h2>
+</div>
+<div id="outline-container-org73cb98a" class="outline-2">
+<h2 id="org73cb98a"><span class="section-number-2">9</span> Tim Mcgee</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+AP: Aeneid, An Intro, A: <iframe width="440" height="335" src="https://www.youtube.com/embed/8f-E0IdfzTI" frameborder="0" allowfullscreen></iframe>
+<iframe width="440" height="335" src="https://www.youtube.com/embed/VWMdL76hSUg" frameborder="0" allowfullscreen></iframe>
+AP: Aeneid, Book 1, A: <iframe width="440" height="335" src="https://www.youtube.com/embed/QaRjct1ba2Q" frameborder="0" allowfullscreen></iframe>
+AP: Aeneid, Book 1, B: <iframe width="440" height="335" src="https://www.youtube.com/embed/7dJYPT8DfqQ" frameborder="0" allowfullscreen></iframe>
+AP: Aeneid, Book 2, A: <iframe width="440" height="335" src="https://www.youtube.com/embed/jSuigonrvdY" frameborder="0" allowfullscreen></iframe>
+AP: Aeneid, Book 2, B: <iframe width="440" height="335" src="https://www.youtube.com/embed/b5OU1p5cR34" frameborder="0" allowfullscreen></iframe>
+AP: Aeneid, Book 2, C: <iframe width="440" height="335" src="https://www.youtube.com/embed/eLs7AxvG3gA" frameborder="0" allowfullscreen></iframe>
+AP: Aeneid, Book 3, A: <iframe width="440" height="335" src="https://www.youtube.com/embed/dtCBMzasro8" frameborder="0" allowfullscreen></iframe>
+AP: Aeneid, Book 3, B: <iframe width="440" height="335" src="https://www.youtube.com/embed/oGKVwY2X7ug" frameborder="0" allowfullscreen></iframe>
+AP: Aeneid, Book 4, A: <iframe width="440" height="335" src="https://www.youtube.com/embed/VnCshBSfSDA" frameborder="0" allowfullscreen></iframe>
+AP: Aeneid, Book 4, B: <iframe width="440" height="335" src="https://www.youtube.com/embed/yMTYFYJwnyQ" frameborder="0" allowfullscreen></iframe>
+AP: Aeneid, Book 4, C: <iframe width="440" height="335" src="https://www.youtube.com/embed/f7ovljLP1Xg" frameborder="0" allowfullscreen></iframe>
+AP: Aeneid, Book 4, D: <iframe width="440" height="335" src="https://www.youtube.com/embed/T2NKll6YV-w" frameborder="0" allowfullscreen></iframe>
+AP: Aeneid, Book 5, A: <iframe width="440" height="335" src="https://www.youtube.com/embed/h84FsdD9LoA" frameborder="0" allowfullscreen></iframe>
+AP: Aeneid, Book 5, B: <iframe width="440" height="335" src="https://www.youtube.com/embed/XRT8ZN9-HBE" frameborder="0" allowfullscreen></iframe>
+AP: Aeneid, Book 5, C: <iframe width="440" height="335" src="https://www.youtube.com/embed/TpZ9p9tmhiM" frameborder="0" allowfullscreen></iframe>
+AP: Aeneid, Book 6, A: <iframe width="440" height="335" src="https://www.youtube.com/embed/wjPAe38IkWA" frameborder="0" allowfullscreen></iframe>
+AP: Aeneid, Book 6, B: <iframe width="440" height="335" src="https://www.youtube.com/embed/6QxaghvCH5Q" frameborder="0" allowfullscreen></iframe>
+AP: Aeneid, Book 6, C: <iframe width="440" height="335" src="https://www.youtube.com/embed/d41ERrKxcLw" frameborder="0" allowfullscreen></iframe>
+AP: Aeneid, Book 6, D: <iframe width="440" height="335" src="https://www.youtube.com/embed/xWujGyNvmSI" frameborder="0" allowfullscreen></iframe>
+AP: Aeneid, Book 7, A: <iframe width="440" height="335" src="https://www.youtube.com/embed/-gWJkNlY3qg" frameborder="0" allowfullscreen></iframe>
+AP: Aeneid, Book 7, B: <iframe width="440" height="335" src="https://www.youtube.com/embed/hjERWTTDLtY" frameborder="0" allowfullscreen></iframe>
+AP: Aeneid, Book 7, C: <iframe width="440" height="335" src="https://www.youtube.com/embed/4lOYOt8yBI0" frameborder="0" allowfullscreen></iframe>
+AP: Aeneid, Book 8, A: <iframe width="440" height="335" src="https://www.youtube.com/embed/d3xCHeJqma4" frameborder="0" allowfullscreen></iframe>
+AP: Aeneid, Book 8, B: <iframe width="440" height="335" src="https://www.youtube.com/embed/6TTpXDryLqM" frameborder="0" allowfullscreen></iframe>
+AP: Aeneid, Book 9, A: <iframe width="440" height="335" src="https://www.youtube.com/embed/HmKeLe5b99Y" frameborder="0" allowfullscreen></iframe>
+AP: Aeneid, Book 9, B: <iframe width="440" height="335" src="https://www.youtube.com/embed/ZSNXBSKGM6o" frameborder="0" allowfullscreen></iframe>
+AP: Aeneid, Book 10, A: <iframe width="440" height="335" src="https://www.youtube.com/embed/B98DDSiGzxE" frameborder="0" allowfullscreen></iframe>
+AP: Aeneid, Book 10, B: <iframe width="440" height="335" src="https://www.youtube.com/embed/Ne0RpOAKjRg" frameborder="0" allowfullscreen></iframe>
+AP: Aeneid, Book 10, C: <iframe width="440" height="335" src="https://www.youtube.com/embed/lSZ_oLMZMMQ" frameborder="0" allowfullscreen></iframe>
+AP: Aeneid, Book 11, A: <iframe width="440" height="335" src="https://www.youtube.com/embed/K4sT9mpZj-s" frameborder="0" allowfullscreen></iframe>
+AP: Aeneid, Book 11, B: <iframe width="440" height="335" src="https://www.youtube.com/embed/1WjEX-UkkAY" frameborder="0" allowfullscreen></iframe>
+AP: Aeneid, Book 11, C: <iframe width="440" height="335" src="https://www.youtube.com/embed/BxW7GRKY-ug" frameborder="0" allowfullscreen></iframe>
+AP: Aeneid, Book 12, A: <iframe width="440" height="335" src="https://www.youtube.com/embed/xuk5tkzynWI" frameborder="0" allowfullscreen></iframe>
+AP: Aeneid, Book 12, B: <iframe width="440" height="335" src="https://www.youtube.com/embed/fvxwjDYicTI" frameborder="0" allowfullscreen></iframe>
+AP: Aeneid, Book 12, C: <iframe width="440" height="335" src="https://www.youtube.com/embed/mnOXe9k0d64" frameborder="0" allowfullscreen></iframe>
+AP: Aeneid, Book 12, D: <iframe width="440" height="335" src="https://www.youtube.com/embed/T-dkOWCO07o" frameborder="0" allowfullscreen></iframe>
+</p>
+</div>
+</div>
+<div id="outline-container-orge7d007a" class="outline-2">
+<h2 id="orge7d007a"><span class="section-number-2">10</span> Whitman</h2>
+<div class="outline-text-2" id="text-10">
+</div>
+<div id="outline-container-orgccdc898" class="outline-3">
+<h3 id="orgccdc898"><span class="section-number-3">10.1</span> Whitman, Intro, A:</h3>
+<div class="outline-text-3" id="text-10-1">
+<p>
+<iframe width="440" height="335" src="https://www.youtube.com/embed/fXYQoA76t7I" frameborder="0" allowfullscreen></iframe>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org35563bc" class="outline-3">
+<h3 id="org35563bc"><span class="section-number-3">10.2</span> Whitman, Intro, B:</h3>
+<div class="outline-text-3" id="text-10-2">
+<p>
+<iframe width="440" height="335" src="https://www.youtube.com/embed/BTyzaVsOU94" frameborder="0" allowfullscreen></iframe>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdb03932" class="outline-3">
+<h3 id="orgdb03932"><span class="section-number-3">10.3</span> Whitman, from the Preface to 1855 Leaves of Grass, p. 426:</h3>
+<div class="outline-text-3" id="text-10-3">
+<p>
+<iframe width="440" height="335" src="https://www.youtube.com/embed/KasBihZ3dnc" frameborder="0" allowfullscreen></iframe>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4158a6a" class="outline-3">
+<h3 id="org4158a6a"><span class="section-number-3">10.4</span> Whitman, from Song of Myself, #1, p. 428:</h3>
+<div class="outline-text-3" id="text-10-4">
+<p>
+<iframe width="440" height="335" src="https://www.youtube.com/embed/TZW71HFqa0o" frameborder="0" allowfullscreen></iframe>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8bdd519" class="outline-3">
+<h3 id="org8bdd519"><span class="section-number-3">10.5</span> Whitman, from Song of Myself, #6, p. 428:</h3>
+<div class="outline-text-3" id="text-10-5">
+<p>
+<iframe width="440" height="335" src="https://www.youtube.com/embed/f1zHhiA7gDc" frameborder="0" allowfullscreen></iframe>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd21ae3a" class="outline-3">
+<h3 id="orgd21ae3a"><span class="section-number-3">10.6</span> Whitman, from Song of Myself, #9, p. 429:</h3>
+<div class="outline-text-3" id="text-10-6">
+<p>
+<iframe width="440" height="335" src="https://www.youtube.com/embed/c-UadtcoS2E" frameborder="0" allowfullscreen></iframe>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgff9e974" class="outline-3">
+<h3 id="orgff9e974"><span class="section-number-3">10.7</span> Whitman, from Song of Myself, #14, p. 429:</h3>
+<div class="outline-text-3" id="text-10-7">
+<p>
+<iframe width="440" height="335" src="https://www.youtube.com/embed/alZklvQthUQ" frameborder="0" allowfullscreen></iframe>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org73808e1" class="outline-3">
+<h3 id="org73808e1"><span class="section-number-3">10.8</span> Whitman, from Song of Myself, #17, p. 430:</h3>
+<div class="outline-text-3" id="text-10-8">
+<p>
+<iframe width="440" height="335" src="https://www.youtube.com/embed//n52NNBDXbpM" frameborder="0" allowfullscreen></iframe>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org62ba158" class="outline-3">
+<h3 id="org62ba158"><span class="section-number-3">10.9</span> Whitman, from Song of Myself, #51, p. 430:</h3>
+<div class="outline-text-3" id="text-10-9">
+<p>
+<iframe width="440" height="335" src="https://www.youtube.com/embed//t9MERdmZSss" frameborder="0" allowfullscreen></iframe>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9133f12" class="outline-3">
+<h3 id="org9133f12"><span class="section-number-3">10.10</span> Whitman, from Song of Myself, #52, p. 431:</h3>
+<div class="outline-text-3" id="text-10-10">
+<p>
+<iframe width="440" height="335" src="https://www.youtube.com/embed//_sHNnlMarmQ" frameborder="0" allowfullscreen></iframe>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge2c40fd" class="outline-3">
+<h3 id="orge2c40fd"><span class="section-number-3">10.11</span> Whitman, When I Heard The Learn’d Astronomer, p. 432:</h3>
+<div class="outline-text-3" id="text-10-11">
+<p>
+<iframe width="440" height="335" src="https://www.youtube.com/embed//185m9qYGgCs" frameborder="0" allowfullscreen></iframe>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf9659a0" class="outline-3">
+<h3 id="orgf9659a0"><span class="section-number-3">10.12</span> Whitman, By The Bivouac’s Fitful Flame, p. 433:</h3>
+<div class="outline-text-3" id="text-10-12">
+<p>
+Flame, A: <iframe width="440" height="335" src="https://www.youtube.com/embed//MUy8IFINas8" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+Flame, B: <iframe width="440" height="335" src="https://www.youtube.com/embed//px2f6Gf81yw" frameborder="0" allowfullscreen></iframe>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge1ced14" class="outline-3">
+<h3 id="orge1ced14"><span class="section-number-3">10.13</span> Whitman, I Hear America Singing, p. 435:</h3>
+<div class="outline-text-3" id="text-10-13">
+<p>
+<iframe width="440" height="335" src="https://www.youtube.com/embed//5d7A3vkkXnA" frameborder="0" allowfullscreen></iframe>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org858c10f" class="outline-3">
+<h3 id="org858c10f"><span class="section-number-3">10.14</span> Whitman, A Noiseless Patient Spider, p. 436:</h3>
+<div class="outline-text-3" id="text-10-14">
+<p>
+<iframe width="440" height="335" src="https://www.youtube.com/embed//7GWu09Md6TU" frameborder="0" allowfullscreen></iframe>
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org1d3d986" class="outline-2">
+<h2 id="org1d3d986"><span class="section-number-2">11</span> life</h2>
+<div class="outline-text-2" id="text-11">
+</div>
+<div id="outline-container-orgeb6fc27" class="outline-3">
+<h3 id="orgeb6fc27"><span class="section-number-3">11.1</span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-12-02 Mon&gt;</span></span></h3>
+<div class="outline-text-3" id="text-11-1">
+<ul class="org-ul">
+<li>took the train to school in the snow.</li>
+<li>got chik-fil-a with maria.</li>
+<li>small talk with s white.</li>
+</ul>
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2019-12-02 Mon 17:32&gt; </span></span> 
+</p>
+<ul class="org-ul">
+<li>books' table of contents can be written as directives.</li>
+<li>went to skirball, talked with tiff, misa, chelsea, and Samson.
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2019-12-02 Mon 22:19&gt;</span></span></li>
+<li>talked to maria</li>
+<li>rob wolf supplements: magnesium, vit d, b12</li>
+<li>ma was mean and snippy for no reason</li>
+<li>robert rodriguez rules: take notes, trust in doing,</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org17b6c0c" class="outline-3">
+<h3 id="org17b6c0c"><span class="section-number-3">11.2</span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-12-03 Tue&gt;</span></span></h3>
+<div class="outline-text-3" id="text-11-2">
+<ul class="org-ul">
+<li>woke up, brushed teeth</li>
+<li>worked on folding and comp for Christine</li>
+<li>spent some time on treadmill in the morning.</li>
+</ul>
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2019-12-03 Tue 18:01&gt;</span></span>
+</p>
+<ul class="org-ul">
+<li>went for a walk before comp sci, did 250 words spoken</li>
+<li>studied accounting in comp sci</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1da81e4" class="outline-3">
+<h3 id="org1da81e4"><span class="section-number-3">11.3</span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-12-05 Thu&gt;</span></span></h3>
+<div class="outline-text-3" id="text-11-3">
+<ul class="org-ul">
+<li>entered more directives into notes.org</li>
+<li>read sivers interview on tim ferriss</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4a88927" class="outline-3">
+<h3 id="org4a88927"><span class="section-number-3">11.4</span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-12-06 Fri&gt;</span></span></h3>
+<div class="outline-text-3" id="text-11-4">
+<ul class="org-ul">
+<li>the dickens process</li>
+<li>what has each belief cost you in the past, and what has it cost
+people you loved in the past? what have you lost because of that
+belief</li>
+<li>what is each costing you and people you care about in the present?</li>
+<li>what will each cast you and people you care about 1,3,5 10 years
+from now?</li>
+</ul>
+
+<p>
+2/3 replacement beliefs
+</p>
+<ul class="org-ul">
+<li>the power of belief</li>
+<li>think success dont think failure</li>
+<li>remind yourself regularly that you are better than you think you ar e</li>
+<li>Believe Big</li>
+<li>refuse to talk about your health</li>
+<li>be genuinely grateful that your health is as good as it is</li>
+<li>refuse to worry about your health</li>
+<li>its better to wear out then to rust out</li>
+<li>my attitudes are more improtnat then my intelligence</li>
+<li>thnik &gt; memory</li>
+<li>never underestimate your own intelligence, never overestimate the
+intelligence of others</li>
+<li>remind yourself: my</li>
+<li>invest future time in doing what you really want to do</li>
+<li>dont be a wishful thinker</li>
+<li>accept cause and effect</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org35bcd54" class="outline-3">
+<h3 id="org35bcd54"><span class="section-number-3">11.5</span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-12-08 Sun&gt;</span></span></h3>
+<div class="outline-text-3" id="text-11-5">
+<ul class="org-ul">
+<li>restored my phone sat night</li>
+<li>not feeling too hot about finals</li>
+<li></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgccffb25" class="outline-3">
+<h3 id="orgccffb25"><span class="section-number-3">11.6</span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-12-09 Mon&gt;</span></span></h3>
+<div class="outline-text-3" id="text-11-6">
+<ul class="org-ul">
+<li>sunday fever over</li>
+<li>WENT TO BED super early lastnight. feels great</li>
+<li>got a super lot done today feeling good</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd897c5f" class="outline-3">
+<h3 id="orgd897c5f"><span class="section-number-3">11.7</span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-12-10 Tue&gt;</span></span></h3>
+<div class="outline-text-3" id="text-11-7">
+<ul class="org-ul">
+<li>went to a couple of classes</li>
+<li>wrote maria some cute texts</li>
+<li>tried to design cover for LNF, realizing that maybe title needs ot
+be simpler</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orga67002e" class="outline-3">
+<h3 id="orga67002e"><span class="section-number-3">11.8</span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-12-11 Wed&gt;</span></span></h3>
+<div class="outline-text-3" id="text-11-8">
+<ul class="org-ul">
+<li>the title doestn need to be simpler, fuck tucker max!</li>
+<li>added comments section, favicon, pagination, etc to personal site.</li>
+<li>gonna go for a walk today.</li>
+<li>finally eating enought</li>
+<li>sleep last night was interesting</li>
+<li>i think i od'd on chicken ln</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge543aa7" class="outline-3">
+<h3 id="orge543aa7"><span class="section-number-3">11.9</span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-12-12 Thu&gt;</span></span></h3>
+<div class="outline-text-3" id="text-11-9">
+<ul class="org-ul">
+<li>got to grandmas early today</li>
+</ul>
+<ul class="org-ul">
+<li>thinking about praying</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga803da6" class="outline-3">
+<h3 id="orga803da6"><span class="section-number-3">11.10</span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2020-02-10 Mon&gt;</span></span></h3>
+<div class="outline-text-3" id="text-11-10">
+<ul class="org-ul">
+<li>condizionales</li>
+<li>made a list for DP</li>
+<li>using a post it note pad</li>
+<li>equations for life</li>
+<li>not going to make websites any more, not going to design my own covers,</li>
+</ul>
+<p>
+maybe
+</p>
+<ul class="org-ul">
+<li></li>
+</ul>
+<p>
+male to female ratio was like 1 : 0 
+</p>
+</div>
+</div>
+<div id="outline-container-org1c1e787" class="outline-3">
+<h3 id="org1c1e787"><span class="section-number-3">11.11</span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2020-03-19 Thu&gt;</span></span></h3>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Joseph Ruocco</p>
+<p class="date">Created: 2020-06-04 Thu 14:45</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
